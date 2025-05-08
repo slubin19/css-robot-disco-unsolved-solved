@@ -1,0 +1,159 @@
+.robot-eye-left
+{
+    animation: color-switcher 3s infinite;
+}
+.robot-eye-left:hover {
+    animation: element-disappear 3s ease-in-out infinite alternate;
+}
+
+.robot-eye-right {
+    animation: element-rotate 3s infinite linear;
+}
+
+.robot-ear-left { 
+    animation: color-switcher 1.4s infinite forwards linear, element-rotate 1s infinite linear;;
+}
+
+.robot-ear-right {
+    animation: color-switcher 1.4s infinite backwards;
+}
+
+.robot-nose {
+    animation: element-wiggle 0.1s infinite;
+}
+
+.robot-teeth {
+    animation: element-scale 0.5s infinite alternate;
+}
+
+.robot-tooth {
+    background-color: white;
+}
+
+.robot-hair-style {
+    position: relative;
+    animation: element-move-around 1s infinite;
+}
+.robot-hair-one {
+    animation: element-color-change 3s infinite reverse;
+
+}
+
+.robot-hair-two {
+    animation: element-color-change 1s infinite;
+}
+
+.robot-hair-three {
+    animation: element-color-change 2s infinite forwards;
+}
+@keyframes element-color-change
+{
+    from
+    {
+        background-image: linear-gradient(green, white, rebeccapurple, red);
+    }
+    to
+    {
+         background-image: linear-gradient(beige, black, orange, teal);
+    }
+}
+@keyframes element-disappear
+{
+    from
+    {
+        opacity: 100%;
+    }
+    to
+    {
+        opacity: 0%;
+    }
+}
+@keyframes element-rotate
+{
+    from
+    {
+        transform: rotate(0);
+    }
+    to
+    {
+        transform: rotate(180deg);
+    }
+}
+@keyframes element-scale
+{
+    from
+    {
+        transform: scale(0.4);
+        background-image: linear-gradient(orange, white);
+    }
+    to
+    {
+        transform: scale(1.15);
+        background-image: linear-gradient(black, black);
+    }
+}
+@keyframes element-move-around
+{
+    0%
+    {
+        top: 0;
+        left: 0;
+        background-image: radial-gradient( red, green);
+    }
+    20%
+    {
+        top: -20px;
+        left: 50px;
+        background-image: radial-gradient(silver, orange);
+    }
+    40%
+    {
+        top: -30px;
+        left: 30px;
+        background-image: radial-gradient(blue, white);
+    }
+    60%
+    {
+        top: -45px;
+        left: 10px;
+        background-image: radial-gradient( red, green);
+    }
+    80%
+    {
+        top: -20px;
+        left: 0px;
+        background-image: radial-gradient(blue, white);
+    }
+    100%
+    {
+        top: 0;
+        left: 0;
+        background-image: radial-gradient( red, green);
+    }
+}
+@keyframes element-wiggle
+{
+    from
+    {
+        transform: translateX(0);
+        background-image: linear-gradient(red, orange, green);
+    }
+    to
+    {
+        transform: translateX(-5px);
+        background-image: linear-gradient(black, grey, teal);
+    }
+}
+@keyframes color-switcher
+{
+    from
+    {
+        background-image: radial-gradient(orange, blue);
+    }
+    to
+    {
+        background-image: radial-gradient(blue, orange);
+    }
+}
+
+
